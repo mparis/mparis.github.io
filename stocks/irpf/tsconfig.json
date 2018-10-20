@@ -1,0 +1,9 @@
+{
+  "compilerOptions": {
+    "module": "None",
+    "outFile": "main.js"
+  },
+  "include": [
+      "src/**/*"
+  ]
+}
