@@ -8,6 +8,14 @@
   </head>
 
   <body>
-    <input type="file" id="files" name="files[]" multiple />
+    Load transactions CSV files <input type="file" id="files" name="files[]" multiple />
+
+    <br><br>
+
+    <div>
+      Basic CSV header: "fecha|hora|producto|isin|titulos|precio|total"
+      <br>
+      DEGIRO: replace CSV header with "fecha,hora,producto,isin,bolsa,titulos,precio_divisa,precio,valor_local_divisa,valor_local,valor_divisa,valor,tipo_cambio_divisa,tipo_cambio,comision,total_divisa,total"
+    </div>
   </body>
 </html>
