@@ -24,14 +24,12 @@ enum TransactionType {
     SELL
 }
 
-
 class StockTransactionsProcessor {
 
     public processFile(file: File) {
         var self = this;
 
         Papa.parse(file, {
-            delimiter: "|",
             header: true,
             skipEmptyLines: true,
             complete: function(result, file) {

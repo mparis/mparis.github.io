@@ -25,7 +25,6 @@ var StockTransactionsProcessor = /** @class */ (function () {
     StockTransactionsProcessor.prototype.processFile = function (file) {
         var self = this;
         Papa.parse(file, {
-            delimiter: "|",
             header: true,
             skipEmptyLines: true,
             complete: function (result, file) {
