@@ -30,6 +30,7 @@ class StockTransactionsProcessor {
         var self = this;
 
         Papa.parse(file, {
+            comments: "#",
             header: true,
             skipEmptyLines: true,
             complete: function(result, file) {
