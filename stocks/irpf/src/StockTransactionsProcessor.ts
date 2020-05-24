@@ -123,8 +123,6 @@ class StockTransactionsProcessor {
             }
         }
 
-        let stocksRemainingPeriod = 0;
-
         for (let isin in prodoucts) {
             let product = prodoucts[isin];
 
@@ -135,7 +133,7 @@ class StockTransactionsProcessor {
 
             var buy = product.buys.pop();
             var stocksBuy = buy.titulos;
-            stocksRemainingPeriod += stocksBuy;
+            var stocksRemainingPeriod = stocksBuy;
 
             console.info(product.name, isin);
 

@@ -112,7 +112,6 @@ var StockTransactionsProcessor = /** @class */ (function () {
                 product.sellsTotal += input.total;
             }
         }
-        var stocksRemainingPeriod = 0;
         for (var isin in prodoucts) {
             var product = prodoucts[isin];
             var currentYear = 0;
@@ -121,7 +120,7 @@ var StockTransactionsProcessor = /** @class */ (function () {
             var gainTotal = 0;
             var buy = product.buys.pop();
             var stocksBuy = buy.titulos;
-            stocksRemainingPeriod += stocksBuy;
+            var stocksRemainingPeriod = stocksBuy;
             console.info(product.name, isin);
             for (var _b = 0, _c = product.sells.reverse(); _b < _c.length; _b++) {
                 var sell = _c[_b];
